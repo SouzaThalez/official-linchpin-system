@@ -1,0 +1,38 @@
+.simulator-relatorioForm-page .page-header-container {
+  margin-top: 10px; }
+  .simulator-relatorioForm-page .page-header-container .col .page-sub-tittle {
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 10px;
+    margin-left: 5px; }
+  .simulator-relatorioForm-page .page-header-container .code-list {
+    display: inline-flex;
+    float: right; }
+    .simulator-relatorioForm-page .page-header-container .code-list li {
+      list-style: none;
+      padding: 5px;
+      margin-right: 10px; }
+.simulator-relatorioForm-page .page-body-container {
+  margin-top: 3em; }
+  .simulator-relatorioForm-page .page-body-container .col {
+    border-radius: 5px;
+    box-shadow: 2px 0px 11px -3px #888888; }
+    .simulator-relatorioForm-page .page-body-container .col .subpanel-tittle-container span {
+      margin-left: 4px; }
+    .simulator-relatorioForm-page .page-body-container .col .pulsos-carotideos-list li {
+      list-style: none;
+      padding: 6px; }
+    .simulator-relatorioForm-page .page-body-container .col .custom-select {
+      margin-left: 11px; }
+    .simulator-relatorioForm-page .page-body-container .col .pulsos-radiais-list li {
+      list-style: none;
+      padding: 6px; }
+    .simulator-relatorioForm-page .page-body-container .col .general-list {
+      margin-left: -30px; }
+      .simulator-relatorioForm-page .page-body-container .col .general-list li {
+        display: inline-flex;
+        list-style: none;
+        padding: 10px; }
+  .simulator-relatorioForm-page .page-body-container .gerar-relatorio-button-container #btn-voltar {
+    margin-right: 10px; }
+
+/*# sourceMappingURL=simulatorRelatorioFormPage.css.map */

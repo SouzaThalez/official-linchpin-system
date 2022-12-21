@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAGI,+BAAI;EACA,aAAa,EAAE,IAAI;AAEvB,+BAAI;EAEA,KAAK,EAAE,KAAK;EACZ,qCAAK;IACD,KAAK,EAAE,KAAK;EAGhB,2CAAW;IACP,MAAM,EAAE,OAAO;IACf,gBAAgB,ECXC,OAAkB",
+"sources": ["../scss/simulatorRelatoriosPage.scss","../scss/variables.scss"],
+"names": [],
+"file": "simulatorRelatoriosPage.css"
+}

@@ -1,0 +1,79 @@
+@import "./variables.scss";
+@import "./sidePanel.scss";
+@import "./simulatorsPage.scss";
+@import "./simulatorRelatorioFormPage.scss";
+@import "./simulatorRelatoriosPage.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  color: black;
+}
+body {
+  background-color: $htmlPageBackgroungColor;
+}
+.nav-bar{
+  //border: 1px dotted black;
+  box-shadow: $boxShadowCols;
+  height: 53px;
+}
+.navbar-container{
+  margin-top: 10px;
+  margin-left: 15px;
+  .navbar-row{
+    margin-top: 12px;
+  }
+  .col-4{
+    //border: 1px dotted black;
+    height: 20px;
+    display: inline-flex;
+    margin-top: 10px;
+    .app-tittle-logo{
+      margin-left: 8px;
+    }
+  }
+  .col-8{
+    height: 20px;
+    margin-top: 10px;
+    //border: 1px dotted black;
+    .menu-links{
+      float: right;
+      margin-top: -8px;
+      list-style: none;
+      display: inline-flex;
+      font-size: 19px;
+      li{
+        padding: 10px;
+        margin-right: 10px; 
+      }
+      li:hover{
+        cursor: pointer;
+        background-color: $contentHoverBackgroundColr;
+        border-radius: 4px;
+        
+      }
+    }
+  }
+}
+.main-container {
+  margin-left: 1em;
+  margin-top: 1em;
+  .row{
+      gap: 30px;
+  }
+  .side-panel{
+    //border: 1px dotted black;
+    width: 300px;
+    height: 500px;
+    
+  }
+  .main-board-panel{
+    box-shadow: $boxShadowCols;
+    //border: 1px dotted black;
+    //height: 500px;
+    width: 950px;
+  }
+  
+}
+

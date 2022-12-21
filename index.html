@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/mainstyle.css">
+    <!--Date flat picker!-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+     <!--Date flat picker blue Theme!-->
+    <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/material_blue.css">
+      <!-- BOOTSTRAP CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- My OWN CSS-->
+    <link rel="stylesheet" href="css/mainstyle.css">
+    <!-- jsPDF Library-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.debug.js"></script>
+    
+    <title>Linchpin System - New verison</title>
+</head>
+<body>
+  <nav class="nav-bar">
+      <div class="container navbar-container">
+        <div class="row navbar-row">
+          <div class="col-4">
+            <span class="app-burguer">
+              <img src="./imgs/icons/menu-burguer.png" alt="sww">
+            </span>
+            <span class="app-tittle-logo">
+                <h4>Linchpin Application</h4>
+            </span>
+          </div>
+          <div class="col-8">
+            <ul class="menu-links">
+              <li  id="relatorio-form">Home</li>
+              <li id="simuladores">Simuladores</li>
+              <li id="relatorios">Relatórios</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  </nav>
+  <div class="container main-container">
+    <div class="row">
+        <div class="col-4 side-panel">
+          <div class="first-side-panel">
+            <span><img src="./imgs/icons/arrow-right.png" alt=""> Opções</span>
+            <ul class="first-side-menu-list">
+              <li><img src="./imgs/icons/AddSimulator-icon.png" alt=""><a href="#">Adicionar Simulador</a></li>
+              <li><img src="./imgs/icons/Status-icon.png" alt=""><a href="#">Status Geral Simulador</a></li>
+            </ul>
+          </div>
+          <div class="second-side-panel">
+            <span><img src="./imgs/icons/arrow-right.png" alt=""> Contact Info</span>
+            <ul class="second-side-menu-list">
+              <li><img src="./imgs/icons/email-icon.png" alt=""><span>administrator@gmail.com</span></li>
+              <li><img src="./imgs/icons/contact-phone.png" alt=""><span>(31)9933882992</span></li>
+            </ul>
+          </div>
+        </div>
+      <div class="main-board-panel">
+
+
+            <div class="pages simulators-page" id="simuladores" style="display: none;">
+              <div class="container">
+                <span class="page-tittle"><h5>Simuladores Cadastrados</h5></span>
+                  <div class="row">
+                     <div class="col">
+                        <div class="img-container">
+                            <img src="./imgs/Simuladores/megaKelly.jpeg" alt="">
+                        </div>
+                        <div class="button-container">
+                          <div class="button-center">
+                            <button type="button" class="btn btn-outline-secondary btn-enviar-relatorio" id="simulatorName">Enviar Relatório</button>
+                          </div>
+                          
+                        </div>
+                     </div>
+                     <div class="col">
+                        <div class="img-container">
+                          <img src="./imgs/Simuladores/megaKid.jpeg" alt="">
+                        </div>
+                        <div class="button-container">
+                          <div class="button-center">
+                            <button type="button" class="btn btn-outline-secondary btn-enviar-relatorio" id="simulatorName">Enviar Relatório</button>
+                          </div>
+                        </div>
+                     </div>
+                     <div class="col">
+                          <div class="img-container">
+                            <img src="./imgs/Simuladores/simBaby.jpeg" alt="">
+                         </div>
+                        <div class="button-container">
+                          <div class="button-center">
+                            <button type="button" class="btn btn-outline-secondary btn-enviar-relatorio" id="simulatorName">Enviar Relatório</button>
+                          </div>
+                        </div>
+                     </div>
+                  </div>
+              </div>
+            </div>
+          
+            <div class="pages simulator-relatorioForm-page" id="relatorio-form" style="display: none;">
+              <!--  
+                <div class="container page-header-container">
+                    <div class="row">
+                        <div class="col">
+                          <span class="page-tittle">Simulator name</span>
+                          <p class="page-sub-tittle">Registre as falhas do seu simulador</p>
+                        </div>
+                        <div class="col">
+                          <ul class="code-list">
+                            <li>Data: </li>
+                            <li>
+                              <select class="custom-select  mr-sm-2" id="inlineFormCustomSelect">
+                                <option selected>Codigo...</option>
+                                <option value="1">s3422121</option>
+                                <option value="2">s3323ss2</option>
+                              </select>
+                            </li>
+                          </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="container page-body-container">
+                        <div class="row">
+                            <div class="col">
+                                <div class="subpanel-tittle-container">
+                                  <img src="./imgs/icons/line-start.png" alt="">
+                                  <span>Pulsos carotideos</span>
+                                </div>
+                                <ul class="pulsos-carotideos-list">
+                                    <li>Direito
+                                      <select class="custom-select  mr-sm-2" id="inlineFormCustomSelect">
+                                        <option selected>Escolha...</option>
+                                        <option value="1">Parou de funcionar</option>
+                                        <option value="2">Pulso fraco</option>
+                                        <option value="3">Nenhuma Falha</option>
+                                      </select>
+                                    </li>
+                                    <li>Esquerdo
+                                      <select class="custom-select  mr-sm-2" id="inlineFormCustomSelect">
+                                        <option selected>Escolha...</option>
+                                        <option value="1">Parou de funcionar</option>
+                                        <option value="2">Pulso fraco</option>
+                                        <option value="2">Nenhuma Falha</option>
+                                      </select>
+                                    </li>
+                                </ul>
+                                <div class="subpanel-tittle-container">
+                                    <img src="./imgs/icons/line-start.png" alt="">
+                                    <span>Pulsos Radiais</span>
+                                </div>
+                                <ul class="pulsos-radiais-list">
+                                    <li>Radial Direito
+                                      <select class="custom-select  mr-sm-2 direito" id="inlineFormCustomSelect">
+                                        <option selected>Escolha...</option>
+                                        <option value="1">Parou de funcionar</option>
+                                        <option value="2">Pulso fraco</option>
+                                        <option value="2">Nenhuma Falha</option>
+                                      </select>
+                                    </li>
+                                    <li>Braqueal Direito
+                                      <select class="custom-select  mr-sm-2" id="inlineFormCustomSelect">
+                                        <option selected>Escolha...</option>
+                                        <option value="1">Parou de funcionar</option>
+                                        <option value="2">Pulso fraco</option>
+                                        <option value="2">Nenhuma Falha</option>
+                                      </select>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="col">
+                                <ul class="general-list">
+                                  <div class="subpanel-tittle-container">
+                                    <img src="./imgs/icons/line-start.png" alt="">
+                                    <span>Geral settings</span>
+                                  </div>
+                                    <li>
+                                      <span>Incursões Respiratórias</span> 
+                                      <select class="custom-select  mr-sm-2 direito" id="inlineFormCustomSelect">
+                                        <option selected>Escolha...</option>
+                                        <option value="1">Parou de funcionar</option>
+                                        <option value="2">Nenhuma Falha</option>
+                                      </select>
+                                    </li>
+                                    <li>
+                                      <span>Eletrodos para Monitorização</span>
+                                      <select class="custom-select  mr-sm-2 direito" id="inlineFormCustomSelect">
+                                        <option selected>Escolha...</option>
+                                        <option value="1">Parou de funcionar</option>
+                                        <option value="2">Faltam eletrodos</option>
+                                        <option value="3">Nenhuma Falha</option>
+                                      </select>
+                                    </li>
+                                    <li>
+                                      <span> Bordas de choque Elétrico</span>
+                                      <select class="custom-select  mr-sm-2 direito" id="inlineFormCustomSelect">
+                                        <option selected>Escolha...</option>
+                                        <option value="1">Parou de funcionar</option>
+                                        <option value="2">Faltam Bordas</option>
+                                        <option value="3">Nenhuma Falha</option>
+                                      </select>
+                                    </li>
+                                    <li>
+                                      <span>Ausculta Cardiaca</span>
+                                      <select class="custom-select  mr-sm-2 direito" id="inlineFormCustomSelect">
+                                        <option selected>Escolha...</option>
+                                        <option value="1">Parou de funcionar</option>
+                                        <option value="2">Nenhuma Falha</option>
+                                      </select>
+                                    </li>
+                                    <li>
+                                      <span> Ausculta Pulmonar</span>
+                                      <select class="custom-select  mr-sm-2 direito" id="inlineFormCustomSelect">
+                                        <option selected>Escolha...</option>
+                                        <option value="1">Parou de funcionar</option>
+                                        <option value="2">Nenhuma Falha</option>
+                                      </select>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="gerar-relatorio-button">
+                                <button type="button" class="btn btn-outline-secondary">Voltar</button>
+                                <button type="button" class="btn btn-outline-secondary">Gerar Relatório</button>
+                            </div>
+
+                        </div>
+                </div>
+              -->
+            </div>
+         
+
+
+
+            <div class="pages simulator-relatorios-page" id="relatorios"style="display: none;">
+                <div class="row">
+                      <div class="col">
+                        <div class="card">
+                          <div class="card-body">
+                            <h5 class="card-title">Simulator Name</h5>
+                            <p class="card-text">Some example text </p>
+                          </div>
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Codigo: 30218</li>
+                            <li class="list-group-item">Data: 10/05/2022</li>
+                          </ul>
+                          <div class="card-body">
+                            <span class="pdf-tittle">PDF Download: </span>
+                            <a href="#" class="card-link">Download</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="card">
+                          <div class="card-body">
+                            <h5 class="card-title">Simulator Name</h5>
+                            <p class="card-text">Some example text </p>
+                          </div>
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Codigo: 30218</li>
+                            <li class="list-group-item">Data: 10/05/2022</li>
+                          </ul>
+                          <div class="card-body">
+                            <span class="pdf-tittle">PDF Download: </span>
+                            <a href="#" class="card-link">Download</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="card">
+                          <div class="card-body">
+                            <h5 class="card-title">Simulator Name</h5>
+                            <p class="card-text">Some example text </p>
+                          </div>
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Codigo: 30218</li>
+                            <li class="list-group-item">Data: 10/05/2022</li>
+                          </ul>
+                          <div class="card-body">
+                            <span class="pdf-tittle">PDF Download: </span>
+                            <a href="#" class="card-link">Download</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="card">
+                          <div class="card-body">
+                            <h5 class="card-title">Simulator Name</h5>
+                            <p class="card-text">Some example text </p>
+                          </div>
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Codigo: 30218</li>
+                            <li class="list-group-item">Data: 10/05/2022</li>
+                          </ul>
+                          <div class="card-body">
+                            <span class="pdf-tittle">PDF Download: </span>
+                            <a href="#" class="card-link">Download</a>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">Simulator Name</h5>
+                        <p class="card-text">Some example text </p>
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Codigo: 30218</li>
+                        <li class="list-group-item">Data: 10/05/2022</li>
+                      </ul>
+                      <div class="card-body">
+                        <span class="pdf-tittle">PDF Download: </span>
+                        <a href="#" class="card-link">Download</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">Simulator Name</h5>
+                        <p class="card-text">Some example text </p>
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Codigo: 30218</li>
+                        <li class="list-group-item">Data: 10/05/2022</li>
+                      </ul>
+                      <div class="card-body">
+                        <span class="pdf-tittle">PDF Download: </span>
+                        <a href="#" class="card-link">Download</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">Simulator Name</h5>
+                        <p class="card-text">Some example text </p>
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Codigo: 30218</li>
+                        <li class="list-group-item">Data: 10/05/2022</li>
+                      </ul>
+                      <div class="card-body">
+                        <span class="pdf-tittle">PDF Download: </span>
+                        <a href="#" class="card-link">Download</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">Simulator Name</h5>
+                        <p class="card-text">Some example text </p>
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Codigo: 30218</li>
+                        <li class="list-group-item">Data: 10/05/2022</li>
+                      </ul>
+                      <div class="card-body">
+                        <span class="pdf-tittle">PDF Download: </span>
+                        <a href="#" class="card-link">Download</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">Simulator Name</h5>
+                        <p class="card-text">Some example text </p>
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Codigo: 30218</li>
+                        <li class="list-group-item">Data: 10/05/2022</li>
+                      </ul>
+                      <div class="card-body">
+                        <span class="pdf-tittle">PDF Download: </span>
+                        <a href="#" class="card-link">Download</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">Simulator Name</h5>
+                        <p class="card-text">Some example text </p>
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Codigo: 30218</li>
+                        <li class="list-group-item">Data: 10/05/2022</li>
+                      </ul>
+                      <div class="card-body">
+                        <span class="pdf-tittle">PDF Download: </span>
+                        <a href="#" class="card-link">Download</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">Simulator Name</h5>
+                        <p class="card-text">Some example text </p>
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Codigo: 30218</li>
+                        <li class="list-group-item">Data: 10/05/2022</li>
+                      </ul>
+                      <div class="card-body">
+                        <span class="pdf-tittle">PDF Download: </span>
+                        <a href="#" class="card-link">Download</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">Simulator Name</h5>
+                        <p class="card-text">Some example text </p>
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Codigo: 30218</li>
+                        <li class="list-group-item">Data: 10/05/2022</li>
+                      </ul>
+                      <div class="card-body">
+                        <span class="pdf-tittle">PDF Download: </span>
+                        <a href="#" class="card-link">Download</a>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    <!--Date flat picker!-->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+     <!-- BOOTSTRAP JS -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+     <script src="./maintype.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+.simulators-page .container {
+  margin-top: 10px; }
+.simulators-page .row {
+  margin-top: 10px; }
+.simulators-page .col {
+  box-shadow: 2px 0px 11px -3px #888888;
+  border-radius: 4px;
+  width: 280px;
+  height: 195px; }
+  .simulators-page .col .img-container {
+    width: 267px;
+    margin-top: 6px;
+    margin-bottom: 10px; }
+    .simulators-page .col .img-container img {
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+      width: 230px;
+      height: 130px;
+      border-radius: 10%; }
+  .simulators-page .col .button-container .button-center {
+    width: 136px;
+    margin: auto; }
+
+/*# sourceMappingURL=simulatorsPage.css.map */

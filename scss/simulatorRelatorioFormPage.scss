@@ -1,0 +1,67 @@
+@import './variables.scss';
+.simulator-relatorioForm-page{
+//GENERAL SCSS
+    .page-header-container{
+        margin-top: 10px;
+        .col{
+            .page-tittle{
+                //font-family:'Times New Roman', Times, serif;
+            }
+            .page-sub-tittle{
+                font-family:'Times New Roman', Times, serif;
+                margin-top: 10px;
+                margin-left: 5px;
+            }
+            
+        }
+        .code-list{
+            display: inline-flex;
+            float: right;
+            li{
+                list-style: none;
+                padding: 5px;
+                margin-right: 10px;
+            }
+        }
+    }
+    .page-body-container{
+        margin-top: 3em;
+        .col{
+            border-radius: 5px;
+            box-shadow: $boxShadowCols;
+            .subpanel-tittle-container{
+                span{
+                    margin-left: 4px;
+                }
+            }
+            .pulsos-carotideos-list{
+                li{
+                    list-style: none;
+                    padding: 6px;
+                }
+            }
+            .custom-select{
+                margin-left: 11px;
+            }
+            .pulsos-radiais-list{
+                li{
+                    list-style: none;
+                    padding: 6px;
+                }
+            }
+            .general-list{
+                margin-left: -30px;
+                li{
+                    display: inline-flex;
+                    list-style: none;
+                    padding: 10px;
+                }   
+            }
+        }
+        .gerar-relatorio-button-container{
+            #btn-voltar{
+                margin-right: 10px;
+            }
+        }
+    }
+}

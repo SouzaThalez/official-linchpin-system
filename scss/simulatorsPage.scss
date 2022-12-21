@@ -1,0 +1,38 @@
+@import './variables.scss';
+.simulators-page{
+//GENERAL SCSS 
+    .container{
+        margin-top: 10px;
+    }
+    .row{
+        margin-top: 10px; 
+    };
+    .col{
+        //border: 1px dotted black;
+        box-shadow: $boxShadowCols;
+        border-radius: 4px;
+        width: 280px;
+        height: 195px;;
+        .img-container{
+            width: 267px;
+            margin-top: 6px;
+            //border: 1px dotted blue;
+            margin-bottom: 10px;
+            img{
+                display: block;
+                margin-right: auto;
+                margin-left: auto;
+                width: 230px;
+                height: 130px;
+                border-radius: 10%;
+            }
+        }
+        .button-container{
+           // border: 1px dotted black;
+            .button-center{
+                width: 136px;
+               margin: auto;
+            }
+        }
+    }
+}
