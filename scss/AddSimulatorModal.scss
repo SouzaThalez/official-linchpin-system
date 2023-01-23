@@ -1,0 +1,31 @@
+.modal-body{
+    .card{
+        width: 29rem;
+        .card-img-container{
+            width: 230px;
+            height: 130px;
+            border: 1px dotted black;
+            margin-left: 57px;
+        }
+        .list-group{
+            li:nth-child(2){
+                display: inline-flex;
+                .form-select{
+                    margin-left: 10px;
+                    width: 11rem;
+                }
+            }
+            li:last-child{
+             input{
+                margin-left: 30px;
+             }
+             #validationLink{
+                text-decoration: none;
+                font-size: 18px;
+                color: rgb(0, 140, 255);
+             }
+            }
+        }    
+    }
+    
+}

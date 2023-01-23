@@ -1,24 +1,34 @@
 .side-panel {
-  box-shadow: 2px 0px 11px -3px #888888; }
-  .side-panel .first-side-panel {
-    margin-top: 4em; }
-    .side-panel .first-side-panel .first-side-menu-list {
-      list-style: none; }
-      .side-panel .first-side-panel .first-side-menu-list li {
-        padding: 10px; }
-        .side-panel .first-side-panel .first-side-menu-list li a {
-          text-decoration: none;
-          margin-left: 12px; }
-      .side-panel .first-side-panel .first-side-menu-list li:hover {
-        background-color: #cecaca;
-        border-radius: 4px; }
-  .side-panel .second-side-panel {
-    margin-top: 3em; }
-    .side-panel .second-side-panel .second-side-menu-list {
-      list-style: none; }
-      .side-panel .second-side-panel .second-side-menu-list li {
-        padding: 10px; }
-        .side-panel .second-side-panel .second-side-menu-list li span {
-          margin-left: 12px; }
+  box-shadow: 2px 0px 11px -3px #888888;
+}
+.side-panel .first-side-panel {
+  margin-top: 4em;
+}
+.side-panel .first-side-panel .first-side-menu-list {
+  list-style: none;
+}
+.side-panel .first-side-panel .first-side-menu-list li {
+  padding: 10px;
+}
+.side-panel .first-side-panel .first-side-menu-list li a {
+  text-decoration: none;
+  margin-left: 12px;
+}
+.side-panel .first-side-panel .first-side-menu-list li:hover {
+  background-color: rgb(206, 202, 202);
+  border-radius: 4px;
+}
+.side-panel .second-side-panel {
+  margin-top: 3em;
+}
+.side-panel .second-side-panel .second-side-menu-list {
+  list-style: none;
+}
+.side-panel .second-side-panel .second-side-menu-list li {
+  padding: 10px;
+}
+.side-panel .second-side-panel .second-side-menu-list li span {
+  margin-left: 12px;
+}
 
 /*# sourceMappingURL=sidePanel.css.map */

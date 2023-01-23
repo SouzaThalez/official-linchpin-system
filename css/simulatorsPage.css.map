@@ -1,7 +1,1 @@
-{
-"version": 3,
-"mappings": "AAGI,2BAAU;EACN,UAAU,EAAE,IAAI;AAEpB,qBAAI;EACA,UAAU,EAAE,IAAI;AAEpB,qBAAI;EAEA,UAAU,ECRF,yBAAyB;EDSjC,aAAa,EAAE,GAAG;EAClB,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;EACb,oCAAc;IACV,KAAK,EAAE,KAAK;IACZ,UAAU,EAAE,GAAG;IAEf,aAAa,EAAE,IAAI;IACnB,wCAAG;MACC,OAAO,EAAE,KAAK;MACd,YAAY,EAAE,IAAI;MAClB,WAAW,EAAE,IAAI;MACjB,KAAK,EAAE,KAAK;MACZ,MAAM,EAAE,KAAK;MACb,aAAa,EAAE,GAAG;EAKtB,sDAAc;IACV,KAAK,EAAE,KAAK;IACb,MAAM,EAAE,IAAI",
-"sources": ["../scss/simulatorsPage.scss","../scss/variables.scss"],
-"names": [],
-"file": "simulatorsPage.css"
-}
+{"version":3,"sourceRoot":"","sources":["../scss/simulatorsPage.scss","../scss/variables.scss"],"names":[],"mappings":"AAGI;EACI;;AAEJ;EACI;;AAEJ;EAEI,YCRQ;EDSR;EACA;EACA;;AACA;EACI;EACA;EAEA;;AACA;EACI;EACA;EACA;EACA;EACA;EACA;;AAKJ;EACI;EACD","file":"simulatorsPage.css"}

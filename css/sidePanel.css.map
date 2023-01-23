@@ -1,7 +1,1 @@
-{
-"version": 3,
-"mappings": "AACA,WAAW;EACP,UAAU,ECCE,yBAAyB;EDArC,6BAAiB;IACb,UAAU,EAAE,GAAG;IAEf,mDAAqB;MACjB,UAAU,EAAE,IAAI;MAChB,sDAAE;QACE,OAAO,EAAE,IAAI;QACb,wDAAC;UACG,eAAe,EAAE,IAAI;UACrB,WAAW,EAAE,IAAI;MAIzB,4DAAQ;QACJ,gBAAgB,ECbH,OAAkB;QDc/B,aAAa,EAAE,GAAG;EAK9B,8BAAkB;IACd,UAAU,EAAE,GAAG;IAEf,qDAAsB;MAClB,UAAU,EAAE,IAAI;MAChB,wDAAE;QACE,OAAO,EAAE,IAAI;QACb,6DAAI;UACA,WAAW,EAAE,IAAI",
-"sources": ["../scss/sidePanel.scss","../scss/variables.scss"],
-"names": [],
-"file": "sidePanel.css"
-}
+{"version":3,"sourceRoot":"","sources":["../scss/sidePanel.scss","../scss/variables.scss"],"names":[],"mappings":"AACA;EACI,YCCY;;ADAZ;EACI;;AAEA;EACI;;AACA;EACI;;AACA;EACI;EACA;;AAIR;EACI,kBCba;EDcb;;AAKZ;EACI;;AAEA;EACI;;AACA;EACI;;AACA;EACI","file":"sidePanel.css"}

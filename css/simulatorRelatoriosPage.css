@@ -1,11 +1,15 @@
 .simulator-relatorios-page .row {
-  margin-bottom: 15px; }
+  margin-bottom: 15px;
+}
 .simulator-relatorios-page .col {
-  width: 210px; }
-  .simulator-relatorios-page .col .card {
-    width: 15rem; }
-  .simulator-relatorios-page .col .card:hover {
-    cursor: pointer;
-    background-color: #cecaca; }
+  width: 210px;
+}
+.simulator-relatorios-page .col .card {
+  width: 15rem;
+}
+.simulator-relatorios-page .col .card:hover {
+  cursor: pointer;
+  background-color: rgb(206, 202, 202);
+}
 
 /*# sourceMappingURL=simulatorRelatoriosPage.css.map */

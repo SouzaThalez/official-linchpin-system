@@ -1,0 +1,26 @@
+.modal-body .card {
+  width: 29rem;
+}
+.modal-body .card .card-img-container {
+  width: 230px;
+  height: 130px;
+  border: 1px dotted black;
+  margin-left: 57px;
+}
+.modal-body .card .list-group li:nth-child(2) {
+  display: inline-flex;
+}
+.modal-body .card .list-group li:nth-child(2) .form-select {
+  margin-left: 10px;
+  width: 11rem;
+}
+.modal-body .card .list-group li:last-child input {
+  margin-left: 30px;
+}
+.modal-body .card .list-group li:last-child #validationLink {
+  text-decoration: none;
+  font-size: 18px;
+  color: rgb(0, 140, 255);
+}
+
+/*# sourceMappingURL=AddSimulatorModal.css.map */

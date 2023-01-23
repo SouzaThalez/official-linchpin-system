@@ -2,6 +2,14 @@
 var menuNavBarLinks = document.querySelectorAll('.menu-links li');
 var mainBoardPanel = document.querySelector('.main-board-panel');
 var pages = mainBoardPanel.querySelectorAll('.pages');
+var simulatorsPageContainer = document.querySelector('.simulators-page .container');
+var Simulator = /** @class */ (function () {
+    function Simulator() {
+    }
+    return Simulator;
+}());
+//Creating an array of object
+var simulatorsV = [];
 //EVENT LISTENERS
 menuNavBarLinks.forEach(function (element) {
     element.addEventListener('click', callPages);
@@ -31,6 +39,16 @@ function callPages(event) {
                 //simuladores Page
                 case 'simuladores':
                     element.setAttribute('style', 'display:block');
+                    var headerContainer = element.querySelector('.simulators-page .page-header-container');
+                    var bodyContainer = element.querySelector('.simulators-page .page-body-container');
+                    if (headerContainer && bodyContainer) {
+                        headerContainer.remove();
+                        bodyContainer.remove();
+                        simulatorsPageContainer.setAttribute('style', 'display:block');
+                    }
+                    else {
+                        simulatorsPageContainer.setAttribute('style', 'display:block');
+                    }
                     var allBtnsEnviarRelatorio = document.querySelectorAll('.simulators-page .button-container .btn-enviar-relatorio');
                     allBtnsEnviarRelatorio.forEach(function (element) {
                         element.addEventListener('click', sendRelatorio);
@@ -49,10 +67,18 @@ function callPages(event) {
 }
 //This function is being called from callPages
 function sendRelatorio(event) {
+    //Creating an instance of Class
+    var model = new Simulator();
     var btnClicked = event.target;
+    var simulatorName = btnClicked.id;
+    //let simulatorsPageContainer = document.querySelector('.simulators-page .container') as HTMLDivElement;
+    simulatorsPageContainer.setAttribute('style', 'display:none');
+    relatorioFormCreation(simulatorName, model);
 }
-function relatorioFormCreation() {
-    var relatorioFormPage = document.querySelector('.main-board-panel .simulator-relatorioForm-page');
+function relatorioFormCreation(selectedName, simulator) {
+    //Creating an instance of Class
+    //let model = new Simulator();
+    var relatorioFormPage = document.querySelector('.main-board-panel .simulators-page');
     mainBoardPanel.append(relatorioFormPage);
     //PageHeader Container       
     var pageHeaderDivContainer = document.createElement('div');
@@ -62,13 +88,17 @@ function relatorioFormCreation() {
     //FIRST COL   
     var firstCol = document.createElement('div');
     firstCol.className = 'col';
-    var spanPageTittle = document.createElement('span');
-    spanPageTittle.className = 'page-tittle';
-    spanPageTittle.innerHTML = 'Simulator NAME...';
+    var h5TagPageTittle = document.createElement('h5');
+    h5TagPageTittle.className = 'page-tittle';
+    h5TagPageTittle.innerHTML = selectedName;
     var paragrapSubPageTittle = document.createElement('p');
     paragrapSubPageTittle.className = 'page-sub-tittle';
-    paragrapSubPageTittle.innerHTML = 'Registre as falhas do seu simulador';
-    firstCol.append(spanPageTittle);
+    paragrapSubPageTittle.innerHTML = 'Quantidade';
+    var spanBadge = document.createElement('span');
+    spanBadge.className = 'badge bg-success';
+    spanBadge.innerHTML = '4';
+    firstCol.append(h5TagPageTittle);
+    paragrapSubPageTittle.append(spanBadge);
     firstCol.append(paragrapSubPageTittle);
     //SECOND COL   
     var secondCol = document.createElement('div');

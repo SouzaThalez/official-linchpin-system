@@ -44,70 +44,143 @@
   <div class="container main-container">
     <div class="row">
         <div class="col-4 side-panel">
-          <div class="first-side-panel">
-            <span><img src="./imgs/icons/arrow-right.png" alt=""> Opções</span>
-            <ul class="first-side-menu-list">
-              <li><img src="./imgs/icons/AddSimulator-icon.png" alt=""><a href="#">Adicionar Simulador</a></li>
-              <li><img src="./imgs/icons/Status-icon.png" alt=""><a href="#">Status Geral Simulador</a></li>
-            </ul>
-          </div>
-          <div class="second-side-panel">
-            <span><img src="./imgs/icons/arrow-right.png" alt=""> Contact Info</span>
-            <ul class="second-side-menu-list">
-              <li><img src="./imgs/icons/email-icon.png" alt=""><span>administrator@gmail.com</span></li>
-              <li><img src="./imgs/icons/contact-phone.png" alt=""><span>(31)9933882992</span></li>
-            </ul>
-          </div>
+            <div class="first-side-panel">
+              <span><img src="./imgs/icons/arrow-right.png" alt=""> Opções</span>
+              <ul class="first-side-menu-list">
+                <li><img src="./imgs/icons/AddSimulator-icon.png" alt=""><a data-bs-toggle="modal" href="#staticBackdrop">Adicionar Simulador</a></li>
+                <li><img src="./imgs/icons/Status-icon.png" alt=""><a href="#">Status Geral Simulador</a></li>
+              </ul>
+            </div>
+            <div class="second-side-panel">
+              <span><img src="./imgs/icons/arrow-right.png" alt=""> Contact Info</span>
+              <ul class="second-side-menu-list">
+                <li><img src="./imgs/icons/email-icon.png" alt=""><span>administrator@gmail.com</span></li>
+                <li><img src="./imgs/icons/contact-phone.png" alt=""><span>(31)9933882992</span></li>
+              </ul>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Novo Simulador</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="card">
+                      <div class="card-body">
+                        <p class="card-img-container"> Imagem do seu Simulador
+                          <img src="..." class="card-img-top" alt="...">
+                        </p>
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><input type="file" accept=".jpg, .jpeg, .png"></li>
+                        <li class="list-group-item">Simulador
+                          <select class="form-select" aria-label="Default select example">
+                            <option selected>selecione...</option>
+                            <option value="1">SimManALS</option>
+                            <option value="2">SimMan3G</option>
+                            <option value="3">SimuJunior</option>
+                            <option value="4">SimuBabyClassic</option>
+                          </select>
+                        </li>
+                        <li class="list-group-item">Codigo
+                          <input type="text" placeholder=" inserir codigo ...">
+                          <a  id="validationLink" href="#">Validar</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-success">Adicionar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
         </div>
-      <div class="main-board-panel">
-
-
+        <div class="col main-board-panel">
             <div class="pages simulators-page" id="simuladores" style="display: none;">
               <div class="container">
                 <span class="page-tittle"><h5>Simuladores Cadastrados</h5></span>
-                  <div class="row">
-                     <div class="col">
-                        <div class="img-container">
-                            <img src="./imgs/Simuladores/megaKelly.jpeg" alt="">
-                        </div>
-                        <div class="button-container">
-                          <div class="button-center">
-                            <button type="button" class="btn btn-outline-secondary btn-enviar-relatorio" id="simulatorName">Enviar Relatório</button>
+                  <!--rows with 3 cols MAX !-->
+                          <div class="row">
+                              <div class="col">
+                                  <div class="img-container">
+                                      <img src="./imgs/Simuladores/megaKelly.jpeg" alt="">
+                                  </div>
+                                  <div class="button-container">
+                                    <div class="button-center">
+                                      <button type="button" class="btn btn-outline-secondary btn-enviar-relatorio" id="megaKelly">Enviar Relatório</button>
+                                    </div>
+                                    
+                                  </div>
+                              </div>
+                              <div class="col">
+                                  <div class="img-container">
+                                    <img src="./imgs/Simuladores/megaKid.jpeg" alt="">
+                                  </div>
+                                  <div class="button-container">
+                                    <div class="button-center">
+                                      <button type="button" class="btn btn-outline-secondary btn-enviar-relatorio" id="megaKid">Enviar Relatório</button>
+                                    </div>
+                                  </div>
+                              </div>
+                              <div class="col">
+                                    <div class="img-container">
+                                      <img src="./imgs/Simuladores/simBaby.jpeg" alt="">
+                                  </div>
+                                  <div class="button-container">
+                                    <div class="button-center">
+                                      <button type="button" class="btn btn-outline-secondary btn-enviar-relatorio" id="simBaby">Enviar Relatório</button>
+                                    </div>
+                                  </div>
+                              </div>
                           </div>
-                          
-                        </div>
-                     </div>
-                     <div class="col">
-                        <div class="img-container">
-                          <img src="./imgs/Simuladores/megaKid.jpeg" alt="">
-                        </div>
-                        <div class="button-container">
-                          <div class="button-center">
-                            <button type="button" class="btn btn-outline-secondary btn-enviar-relatorio" id="simulatorName">Enviar Relatório</button>
+                          <div class="row">
+                            <div class="col">
+                              <div class="img-container">
+                                  <img src="./imgs/Simuladores/RessuciAnne.jpg" alt="">
+                              </div>
+                              <div class="button-container">
+                                <div class="button-center">
+                                  <button type="button" class="btn btn-outline-secondary btn-enviar-relatorio" id="ressusciAnne">Enviar Relatório</button>
+                                </div>
+                                
+                              </div>
+                            </div>
+                            <div class="col">
+                              <div class="img-container">
+                                <img src="./imgs/Simuladores/simJunior.jpeg" alt="">
+                              </div>
+                              <div class="button-container">
+                                <div class="button-center">
+                                  <button type="button" class="btn btn-outline-secondary btn-enviar-relatorio" id="simJunior">Enviar Relatório</button>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col">
+                                <div class="img-container">
+                                  <img src="./imgs/Simuladores/SimManALS.jpeg" alt="">
+                                </div>
+                              <div class="button-container">
+                                <div class="button-center">
+                                  <button type="button" class="btn btn-outline-secondary btn-enviar-relatorio" id="simManALS">Enviar Relatório</button>
+                                </div>
+                              </div>
+                            </div>
                           </div>
-                        </div>
-                     </div>
-                     <div class="col">
-                          <div class="img-container">
-                            <img src="./imgs/Simuladores/simBaby.jpeg" alt="">
-                         </div>
-                        <div class="button-container">
-                          <div class="button-center">
-                            <button type="button" class="btn btn-outline-secondary btn-enviar-relatorio" id="simulatorName">Enviar Relatório</button>
-                          </div>
-                        </div>
-                     </div>
-                  </div>
               </div>
             </div>
           
-            <div class="pages simulator-relatorioForm-page" id="relatorio-form" style="display: none;">
-              <!--  
+            <div class="pages simulator-relatorioForm-page" id="relatorio-form" style="display: block;">
+               <!--
                 <div class="container page-header-container">
                     <div class="row">
                         <div class="col">
-                          <span class="page-tittle">Simulator name</span>
-                          <p class="page-sub-tittle">Registre as falhas do seu simulador</p>
+                          <h5 class="page-tittle">Simulator name</h5>
+                          <p class="page-sub-tittle">Quantidade <span class="badge bg-success">2</span></p>
+                          
                         </div>
                         <div class="col">
                           <ul class="code-list">
@@ -232,9 +305,6 @@
                 </div>
               -->
             </div>
-         
-
-
 
             <div class="pages simulator-relatorios-page" id="relatorios"style="display: none;">
                 <div class="row">
@@ -436,7 +506,7 @@
                   </div>
             </div>
             </div>
-      </div>
+        </div>
     </div>
   </div>
 

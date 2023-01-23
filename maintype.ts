@@ -2,12 +2,16 @@
 const menuNavBarLinks = document.querySelectorAll('.menu-links li');
 const mainBoardPanel = document.querySelector('.main-board-panel') as HTMLDivElement;
 const pages = mainBoardPanel.querySelectorAll('.pages');
+let simulatorsPageContainer = document.querySelector('.simulators-page .container') as HTMLDivElement;
 
 class Simulator{
     name: string;
     quantity: number;
+    codes: Array<string>;
     
 }
+//Creating an array of object
+let simulatorsV: Simulator [] = [];
 
 
 
@@ -50,10 +54,21 @@ function callPages(event: any){
                 //simuladores Page
                 case 'simuladores':
                     element.setAttribute('style','display:block');
+                    let headerContainer =  element.querySelector('.simulators-page .page-header-container');
+                    let bodyContainer =  element.querySelector('.simulators-page .page-body-container');
+                    if(headerContainer && bodyContainer){
+                        headerContainer.remove();
+                        bodyContainer.remove();
+                        simulatorsPageContainer.setAttribute('style','display:block');
+                    }else{
+                        simulatorsPageContainer.setAttribute('style','display:block');
+                    }
                     const allBtnsEnviarRelatorio = document.querySelectorAll('.simulators-page .button-container .btn-enviar-relatorio');
                     allBtnsEnviarRelatorio.forEach(element =>{
                         element.addEventListener('click',sendRelatorio);
                     });
+
+
                     break
                 // Relatorios Page
                 case 'relatorios':
@@ -69,13 +84,22 @@ function callPages(event: any){
 }
 //This function is being called from callPages
 function sendRelatorio(event: any){
+    //Creating an instance of Class
+    let model = new Simulator();
+
     let btnClicked = event.target;
+    let simulatorName = btnClicked.id;
+    //let simulatorsPageContainer = document.querySelector('.simulators-page .container') as HTMLDivElement;
+    simulatorsPageContainer.setAttribute('style','display:none');
+    relatorioFormCreation(simulatorName, model);
     
 }
 
-function relatorioFormCreation(){
+function relatorioFormCreation(selectedName: string , simulator: Simulator){
+//Creating an instance of Class
+    //let model = new Simulator();
     
-    const relatorioFormPage = document.querySelector('.main-board-panel .simulator-relatorioForm-page') as HTMLDivElement;
+    const relatorioFormPage = document.querySelector('.main-board-panel .simulators-page') as HTMLDivElement;
     mainBoardPanel.append(relatorioFormPage);
 //PageHeader Container       
     const pageHeaderDivContainer = document.createElement('div');
@@ -85,13 +109,17 @@ function relatorioFormCreation(){
 //FIRST COL   
     const firstCol = document.createElement('div');
     firstCol.className = 'col';
-    const spanPageTittle = document.createElement('span');
-    spanPageTittle.className = 'page-tittle';
-    spanPageTittle.innerHTML = 'Simulator NAME...'
+    const h5TagPageTittle = document.createElement('h5');
+    h5TagPageTittle.className = 'page-tittle';
+    h5TagPageTittle.innerHTML = selectedName;
     const paragrapSubPageTittle = document.createElement('p');
     paragrapSubPageTittle.className = 'page-sub-tittle';
-    paragrapSubPageTittle.innerHTML = 'Registre as falhas do seu simulador';
-    firstCol.append(spanPageTittle);
+    paragrapSubPageTittle.innerHTML = 'Quantidade';
+    const spanBadge = document.createElement('span');
+    spanBadge.className = 'badge bg-success';
+    spanBadge.innerHTML = '4';
+    firstCol.append(h5TagPageTittle);
+    paragrapSubPageTittle.append(spanBadge);
     firstCol.append(paragrapSubPageTittle);
 //SECOND COL   
     const secondCol = document.createElement('div');
